@@ -71,6 +71,8 @@ searchForm.addEventListener('submit', e => {
         );
       } else {
         console.log(data.hits);
+
+        Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images`);
         renderGallery(data.hits);
         simpleLightBox = new SimpleLightbox('.gallery a').refresh();
 
@@ -101,3 +103,11 @@ loadMoreBtn.addEventListener('click', e => {
     })
     .catch(error => console.log(error));
 });
+// window.addEventListener('scroll', e => {});
+// const { height: cardHeight } = document
+//   .querySelector('.gallery')
+//   .firstElementChild.getBoundingClientRect();
+// console.log(cardHeight);
+// window.scrollBy({
+//   behavior: 'smooth',
+// });

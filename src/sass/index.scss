@@ -2,6 +2,21 @@
 @import './example';
 .btn-load-more.is-hidden {
     display: none;
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    height: 50px;
+}
+.inpute {
+    display: inline-block;
+    height: 30px ;
+    width: 150px;
+
+
 }
 a {
     text-decoration: none;
@@ -58,4 +73,17 @@ p {
 
 .info-item:not(:first-child) {
     margin-left: 5px;
+};
+ .btn-load-more {
+     background-color: blue;
+     color: aqua;
+
+ };
+.submitBtn{
+    background-color: violet;
+    color: black;
+    cursor: pointer;
+}
+.submitBtn:hover {
+    background-color: aquamarine;
 }
