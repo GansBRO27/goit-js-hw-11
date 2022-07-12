@@ -103,11 +103,13 @@ loadMoreBtn.addEventListener('click', e => {
     })
     .catch(error => console.log(error));
 });
-// window.addEventListener('scroll', e => {});
-// const { height: cardHeight } = document
-//   .querySelector('.gallery')
-//   .firstElementChild.getBoundingClientRect();
-// console.log(cardHeight);
-// window.scrollBy({
-//   behavior: 'smooth',
-// });
+
+arrowTop.onclick = function () {
+  window.scrollTo(pageXOffset, 0);
+  // после scrollTo возникнет событие "scroll", так что стрелка автоматически скроется
+};
+
+window.addEventListener('scroll', function () {
+  arrowTop.hidden = pageYOffset < document.documentElement.clientHeight;
+  console.assertlog();
+});

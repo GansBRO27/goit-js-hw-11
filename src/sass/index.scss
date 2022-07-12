@@ -86,4 +86,17 @@ p {
 }
 .submitBtn:hover {
     background-color: aquamarine;
-}
+};
+   #arrowTop {
+       height: 50px;
+       width: 14px;
+       color: red;
+       position: fixed;
+       top: 10px;
+       left: 10px;
+       cursor: pointer;
+   };
+
+   #arrowTop::before {
+       content: '▲';
+   }
